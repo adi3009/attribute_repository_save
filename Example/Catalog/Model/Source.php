@@ -1,6 +1,8 @@
 <?php
 
-class ExampleSource extends \Magento\Eav\Model\Entity\Attribute\Source\AbstractSource
+namespace Example\Catalog\Model;
+
+class Source extends \Magento\Eav\Model\Entity\Attribute\Source\AbstractSource
 {
     /**
      * Retrieve option array

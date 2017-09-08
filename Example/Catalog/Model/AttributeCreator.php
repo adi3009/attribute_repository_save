@@ -1,11 +1,13 @@
 <?php
 
+namespace Example\Catalog\Model;
+
 use Magento\Catalog\Api\Data\ProductAttributeInterface;
 use Magento\Catalog\Api\ProductAttributeRepositoryInterface;
 use Magento\Catalog\Model\ResourceModel\Eav\AttributeFactory;
 use Magento\Framework\Exception\NoSuchEntityException;
 
-class ExampleAttributeCreator
+class AttributeCreator
 {
     private $attributeFactory;
     private $attributeRepository;
@@ -33,7 +35,7 @@ class ExampleAttributeCreator
             'frontend_label' => 'Example Attribute',
         ];
         $attribute->addData($attributeData);
-        $attribute->setSourceModel('ExampleSource');
+        $attribute->setSourceModel(Source::class);
         $this->attributeRepository->save($attribute);
     }
 }
